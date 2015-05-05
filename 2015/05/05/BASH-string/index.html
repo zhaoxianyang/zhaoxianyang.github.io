@@ -3,17 +3,29 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Blog Of Syang</title>
+  <title>BASH--string | Blog Of Syang</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Blog Of Syang">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="有时候我们需要对变量进行一些操作，比如截取，替换，删除等操作，很多同学会使用awk, sed 或cut等命令来干这事，其实，bash的内置的变量操作就可以干这个事。下面说明一些常用的方法：
+这些操作需要使用 ${var} 这种变量的写法（用花括号）。
+${\#var} 输出 var的字符串长度
+${var:pos:len} 你可以理解为变量的切片操作。如：
+1234567891011&amp;gt; va">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BASH--string">
+<meta property="og:url" content="http://yoursite.com/2015/05/05/BASH-string/index.html">
 <meta property="og:site_name" content="Blog Of Syang">
-<meta property="og:description">
+<meta property="og:description" content="有时候我们需要对变量进行一些操作，比如截取，替换，删除等操作，很多同学会使用awk, sed 或cut等命令来干这事，其实，bash的内置的变量操作就可以干这个事。下面说明一些常用的方法：
+这些操作需要使用 ${var} 这种变量的写法（用花括号）。
+${\#var} 输出 var的字符串长度
+${var:pos:len} 你可以理解为变量的切片操作。如：
+1234567891011&amp;gt; va">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Blog Of Syang">
-<meta name="twitter:description">
+<meta name="twitter:title" content="BASH--string">
+<meta name="twitter:description" content="有时候我们需要对变量进行一些操作，比如截取，替换，删除等操作，很多同学会使用awk, sed 或cut等命令来干这事，其实，bash的内置的变量操作就可以干这个事。下面说明一些常用的方法：
+这些操作需要使用 ${var} 这种变量的写法（用花括号）。
+${\#var} 输出 var的字符串长度
+${var:pos:len} 你可以理解为变量的切片操作。如：
+1234567891011&amp;gt; va">
   
     <link rel="alternative" href="/atom.xml" title="Blog Of Syang" type="application/atom+xml">
   
@@ -59,9 +71,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-BASH-string" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-BASH-string" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2015/05/05/BASH-string/" class="article-date">
   <time datetime="2015-05-05T07:21:11.000Z" itemprop="datePublished">2015-05-05</time>
@@ -74,8 +84,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/05/BASH-string/">BASH--string</a>
+    <h1 class="article-title" itemprop="name">
+      BASH--string
     </h1>
   
 
@@ -104,56 +114,20 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/05/05/hello-world/" class="article-date">
-  <time datetime="2015-05-05T07:14:41.000Z" itemprop="datePublished">2015-05-05</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/05/05/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2015/05/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/05/05/hello-world/" data-id="ci9b06r8w0000n4skqfzlzfvj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
 
-
-  
-  
 </section>
         
           <aside id="sidebar">
