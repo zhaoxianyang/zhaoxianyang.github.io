@@ -4,7 +4,7 @@
   <subtitle><![CDATA[不断发现，不断成长]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.syang.xyz/"/>
-  <updated>2015-05-05T09:08:25.000Z</updated>
+  <updated>2015-05-05T09:11:31.000Z</updated>
   <id>http://www.syang.xyz/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://www.syang.xyz/2015/05/05/Nginx-%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.syang.xyz/2015/05/05/Nginx-配置/</id>
     <published>2015-05-05T09:06:32.000Z</published>
-    <updated>2015-05-05T09:08:25.000Z</updated>
+    <updated>2015-05-05T09:11:31.000Z</updated>
     <content type="html"><![CDATA[<h2 id="Nginx安装配置">Nginx安装配置</h2><ul>
 <li><p>download</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//nginx.org/download/nginx-1.6.0.tar.gz</span></span><br><span class="line">tar zxf nginx-<span class="number">1.6</span>.<span class="number">0</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
@@ -47,81 +47,6 @@
 <li><p>download</p>
 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="l]]>
     </summary>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Resume]]></title>
-    <link href="http://www.syang.xyz/2015/05/05/Resume/"/>
-    <id>http://www.syang.xyz/2015/05/05/Resume/</id>
-    <published>2015-05-05T08:30:27.000Z</published>
-    <updated>2015-05-05T08:45:30.000Z</updated>
-    <content type="html"><![CDATA[<h1 id="赵先阳">赵先阳</h1><h2 id="求职意向：后台开发">求职意向：后台开发</h2><blockquote>
-<p>邮箱：<a href="mailto:zhaoxianyang385@gmail.com" target="_blank" rel="external">zhaoxianyang385@gmail.com</a><br>电话：(+86) 135-5439-7842</p>
-</blockquote>
-<pre><code><span class="comment">------</span>
-</code></pre><h3 id="项目">项目</h3><pre><code><span class="keyword">*</span><span class="keyword">*</span>Signichat（[www.signichat.com](http://www.signichat.com)）<span class="keyword">*</span><span class="keyword">*</span> (2013.9 ~ 2014.6, 2014.11 ~ 现在)
-简介：Signichat是一款为科研人员打造的在线大图标注和实时讨论工具，目前处于内测阶段，将于2015年3月和7月开放给两个国际会议与会人员使用。常务开发有5人，包括后端1人。
-职责：负责整个网站的后台架构和数据接口设计；管理并运维网站服务器；为网站搭建运行环境，编写部署、测试脚本；负责整个网站的redis缓存存储结构设计和实现，并设计了一套高扩展性数据库;
-技术：Php, Redis, Memcache, Mysql, Shell, Apache, Nginx，Codeigniter
-
-<span class="keyword">*</span><span class="keyword">*</span>青桔网（[www.qingvoice.com](http://www.qingvoice.com)）<span class="keyword">*</span><span class="keyword">*</span> (2014.7 ~ 2014.10)
-简介：青桔网是一个校园音乐娱乐平台，为全国高校“校园好声音”网络大赛提供选手和音乐展示服务。平台目前有约4万用户，历史单日PV峰值约10万。常务开发有9人，包括后端3人。
-职责：负责整个网站的redis缓存存储结构设计和实现；为网站搭建运行环境，编写部署、测试脚本；
-技术：Php, Redis, Mysql
-
-<span class="keyword">*</span><span class="keyword">*</span>全新的患者-医生交互搜索引擎系统([www.pcori.org/2013/challenge/ ](http://www.pcori.org/2013/challenge/ ))<span class="keyword">*</span><span class="keyword">*</span>
-简介：全新的患者-医生交互搜索引擎系统是基于人类复杂疾病本体(Human Disease Ontology)及译释(Annotation) 生物信息学理论基础，以文字挖掘、模式识别、社交网络分析等信息科学为理论技术基础的学科交叉结晶。
-职责：负责整个系统的数据采集、预处理和后处理过程；编写多线程网页论坛爬虫获取数据；为整个系统提供了计算机技术支持；
-技术：Java, Shell
-
-------
-</code></pre><h3 id="技能">技能</h3><pre><code><span class="strong">**技术**</span>
-
-<span class="bullet">1. </span>PHP(CodeIgniter, Smarty) ★★★
-<span class="bullet">1. </span>Mysql ★★★
-<span class="bullet">1. </span>Shell ★★★
-<span class="bullet">1. </span>Redis ★★★
-<span class="bullet">1. </span>Memcache ★★
-<span class="bullet">1. </span>C++ ★
-<span class="bullet">1. </span>java ★
-
-<span class="strong">**工具**</span>
-
-<span class="bullet">1. </span>Vim ★★★☆
-<span class="bullet">1. </span>Linux ★★★
-<span class="bullet">1. </span>SVN ★★
-<span class="bullet">1. </span>Git ★
-<span class="bullet">1. </span>Apache ★★
-<span class="bullet">1. </span>Nginx ★★
-
-
-注：1星表示了解，3星表示熟悉，5星表示精通
-
-
-
-<span class="horizontal_rule">------</span>
-</code></pre><h3 id="教育">教育</h3><p><strong>电子信息工程专业</strong> (2009 ~ 2013)<br>    华中科技大学 工学学士</p>
-<p><strong>电子信息工程专业</strong> (2013 ~ 现在)<br>    华中科技大学 硕士（在读）</p>
-<pre><code><span class="comment">------</span>
-</code></pre><h3 id="获奖">获奖</h3><pre><code><span class="keyword">*</span><span class="keyword">*</span>校优干奖学金<span class="keyword">*</span><span class="keyword">*</span>(2010.10)
-<span class="keyword">*</span><span class="keyword">*</span>自强奖学金<span class="keyword">*</span><span class="keyword">*</span>(2011.10)
-</code></pre><p><strong>知行奖学金</strong>(2014.12)</p>
-<pre><code><span class="comment">------</span>
-</code></pre><h3 id="自我描述">自我描述</h3><pre><code>享受编程创造之乐，喜欢与数据和脚本打交道，乐于解决各种bug；
-热爱钻研各种新技术，勇于尝鲜各种新玩意；
-注重团队效率和效益，上可对领导（老师）负责项目质量和期限，下可与团队成员沟通协作。
-</code></pre>]]></content>
-    <summary type="html">
-    <![CDATA[<h1 id="赵先阳">赵先阳</h1><h2 id="求职意向：后台开发">求职意向：后台开发</h2><blockquote>
-<p>邮箱：<a href="mailto:zhaoxianyang385@gmail.com" target="_blank" rel="ext]]>
-    </summary>
-    
-      <category term="communication" scheme="http://www.syang.xyz/tags/communication/"/>
-    
-      <category term="skill" scheme="http://www.syang.xyz/tags/skill/"/>
-    
-      <category term="personal" scheme="http://www.syang.xyz/categories/personal/"/>
     
   </entry>
   
