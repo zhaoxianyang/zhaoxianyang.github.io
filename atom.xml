@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Blog Of Syang]]></title>
-  <subtitle><![CDATA[不断发现，不断成长]]></subtitle>
+  <subtitle><![CDATA[不断发现，不断学习，不断成长，不断成熟]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.syang.xyz/"/>
-  <updated>2015-05-05T09:11:31.000Z</updated>
+  <updated>2015-05-06T02:13:11.000Z</updated>
   <id>http://www.syang.xyz/</id>
   
   <author>
@@ -15,24 +15,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[PHP为什么低一等]]></title>
+    <link href="http://www.syang.xyz/2015/05/06/PHP%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%8E%E4%B8%80%E7%AD%89/"/>
+    <id>http://www.syang.xyz/2015/05/06/PHP为什么低一等/</id>
+    <published>2015-05-06T02:13:11.000Z</published>
+    <updated>2015-05-06T02:13:11.000Z</updated>
+    <content type="html"></content>
+    <summary type="html">
+    
+    </summary>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Nginx 配置]]></title>
     <link href="http://www.syang.xyz/2015/05/05/Nginx-%E9%85%8D%E7%BD%AE/"/>
     <id>http://www.syang.xyz/2015/05/05/Nginx-配置/</id>
     <published>2015-05-05T09:06:32.000Z</published>
-    <updated>2015-05-05T09:11:31.000Z</updated>
-    <content type="html"><![CDATA[<h2 id="Nginx安装配置">Nginx安装配置</h2><ul>
-<li><p>download</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//nginx.org/download/nginx-1.6.0.tar.gz</span></span><br><span class="line">tar zxf nginx-<span class="number">1.6</span>.<span class="number">0</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>configure<br>需要根据ip做国家或者城市的分流的话可使用geoip模块；对代码有压缩要求的需启用gzip模块；使用https协议的话，则需要添加http_ssl_module模块；</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在添加geoip模块之前需要，下载并安装相关的库文件</span><br><span class="line">wget <span class="string">http:</span><span class="comment">//geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz </span></span><br><span class="line">wget <span class="string">http:</span><span class="comment">//geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-http_geoip_module --with-http_gzip_static_module </span><br><span class="line">--prefix=/<span class="keyword">app</span>-data/nginx </span><br><span class="line">--http-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/access.<span class="keyword">log</span> </span><br><span class="line">--<span class="keyword">error</span>-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/<span class="keyword">error</span>.<span class="literal">log</span></span><br></pre></td></tr></table></figure>
+    <updated>2015-05-06T06:15:29.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Nginx安装配置">Nginx安装配置</h2><h3 id="download">download</h3><p> wget <a href="http://nginx.org/download/nginx-1.6.0.tar.gz" target="_blank" rel="external">http://nginx.org/download/nginx-1.6.0.tar.gz</a><br> tar zxf nginx-1.6.0.tar.gz</p>
+<hr>
+<h3 id="configure">configure</h3><ol>
+<li>需要根据ip做国家或者城市的分流的话可使用geoip模块；<br> 在添加geoip模块之前需要，下载并安装相关的库文件<br> wget <a href="http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz" target="_blank" rel="external">http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz</a><br> wget <a href="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz" target="_blank" rel="external">http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</a></li>
+<li>对代码有压缩要求的需启用gzip模块；</li>
+<li>使用https协议的话，则需要添加http_ssl_module模块；</li>
+</ol>
 <ul>
-<li>config</li>
+<li>编译安装<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> nginx-1.6.0</span><br><span class="line">./configure --with-http_ssl_module --with-http_geoip_module --with-http_gzip_static_module --prefix=/<span class="keyword">app</span>-data/nginx --http-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/access.<span class="keyword">log</span> --<span class="keyword">error</span>-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/<span class="keyword">error</span>.<span class="literal">log</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">nginx.<span class="keyword">conf</span>:通用全局的配置，如gzip压缩，geoip模块配置，work_process一般是核*2</span><br><span class="line">site-available:已搭建服务</span><br><span class="line">site-enabled:正使用的服务</span><br><span class="line">内部配置文件需改动部分一般只有server_name和<span class="keyword">log</span>地址。</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    <span class="keyword">set</span> <span class="label">$root_folder</span> /ext/bug.signichat.com/web;</span><br><span class="line">    root <span class="label">$root_folder</span>;</span><br><span class="line">    server_name <span class="keyword">test</span>.signichat.com;</span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .(<span class="keyword">zip</span>|js|css) &#123;</span><br><span class="line">        expires 1d;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .(dzi|gif|jpeg|png|jpg|swf|ico) &#123;</span><br><span class="line">        expires 1m;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ /index.php &#123;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  <span class="label">$root_folder</span>/index.php;</span><br><span class="line">        <span class="keyword">include</span>        fastcgi_params;</span><br><span class="line">        fastcgi_param PATH_INFO         <span class="label">$fastcgi_path_info</span>;</span><br><span class="line">        fastcgi_param HTTP_REFERER      <span class="label">$http_referer</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ / &#123;</span><br><span class="line">        rewrite ^/(.*)$ /index.php last;</span><br><span class="line">    &#125;</span><br><span class="line">    error_log  /<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/signichat/<span class="keyword">error</span>.<span class="keyword">log</span>;</span><br><span class="line">    access_log /<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/signichat/access.<span class="keyword">log</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="config">config</h3><p>nginx.conf:通用全局的配置，如gzip压缩，geoip模块配置，work_process一般是核*2<br>site-available:已搭建服务<br>site-enabled:正使用的服务<br>内部配置文件需改动部分一般只有server_name和log地址。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">    <span class="title">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="title">set</span> <span class="variable">$root_folder</span> /app-data/www/域名/web;</span><br><span class="line">    <span class="title">root</span> <span class="variable">$root_folder</span>;</span><br><span class="line">    <span class="title">server_name</span> 域名;</span><br><span class="line">    <span class="title">location</span> / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ .(zip|js|css)</span> &#123;</span><br><span class="line">        <span class="title">expires</span> <span class="number">1d</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ .(dzi|gif|jpeg|png|jpg|swf|ico)</span> &#123;</span><br><span class="line">        <span class="title">expires</span> <span class="number">1m</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ /index.php</span> &#123;</span><br><span class="line">        <span class="title">fastcgi_pass</span>   <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">        <span class="title">fastcgi_param</span>  SCRIPT_FILENAME  <span class="variable">$root_folder</span>/index.php;</span><br><span class="line">        <span class="title">include</span>        fastcgi_params;</span><br><span class="line">        <span class="title">fastcgi_param</span> PATH_INFO         <span class="variable">$fastcgi_path_info</span>;</span><br><span class="line">        <span class="title">fastcgi_param</span> HTTP_REFERER      <span class="variable">$http_referer</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ /</span> &#123;</span><br><span class="line">        <span class="title">rewrite</span><span class="regexp"> ^/(.*)$</span> /index.php <span class="built_in">last</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">error_log</span>  /app-util/log/nginx/A/error.log;</span><br><span class="line">    <span class="title">access_log</span> /app-util/log/nginx/A/access.log;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>启动<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/app-data/</span>nginx<span class="regexp">/sbin/</span>nginx</span><br><span class="line">如果只修改配置文件，则只须重新加载配置文件</span><br><span class="line"><span class="regexp">/app-data/</span>nginx<span class="regexp">/sbin/</span>nginx -s reload</span><br><span class="line">在使用ssl模块的情况下，可能有加载证书的过程，所以修改完配置文件可能需要关闭nginx，再启动才能有效</span><br></pre></td></tr></table></figure>
 </li>
@@ -43,9 +55,7 @@
 <p>更加详细的Nginx配置文件介绍可查看<a href="http://nginx.org/en/docs/beginners_guide.html" target="_blank" rel="external">nginx</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="Nginx安装配置">Nginx安装配置</h2><ul>
-<li><p>download</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="l]]>
+    <![CDATA[<h2 id="Nginx安装配置">Nginx安装配置</h2><h3 id="download">download</h3><p> wget <a href="http://nginx.org/download/nginx-1.6.0.tar.gz" target="_bla]]>
     </summary>
     
   </entry>

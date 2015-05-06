@@ -5,57 +5,74 @@
   <meta charset="UTF-8">
   
     <title>Nginx 配置 | Blog Of Syang</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Syang">
     
-    <meta name="description" content="Nginx安装配置
-download
-12wget http://nginx.org/download/nginx-1.6.0.tar.gztar zxf nginx-1.6.0.tar.gz
 
-configure需要根据ip做国家或者城市的分流的话可使用geoip模块；对代码有压缩要求的需启用gz">
     
+    <meta name="description" content="Nginx安装配置download wget http://nginx.org/download/nginx-1.6.0.tar.gz tar zxf nginx-1.6.0.tar.gz
+
+configure
+需要根据ip做国家或者城市的分流的话可使用geoip模块； 在添加geoip模块之前需要，下载并安装相关的库文件 wget http://geolite.maxmind.com/downl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nginx 配置">
+<meta property="og:url" content="http://www.syang.xyz/2015/05/05/Nginx-配置/index.html">
+<meta property="og:site_name" content="Blog Of Syang">
+<meta property="og:description" content="Nginx安装配置download wget http://nginx.org/download/nginx-1.6.0.tar.gz tar zxf nginx-1.6.0.tar.gz
+
+configure
+需要根据ip做国家或者城市的分流的话可使用geoip模块； 在添加geoip模块之前需要，下载并安装相关的库文件 wget http://geolite.maxmind.com/downl">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nginx 配置">
+<meta name="twitter:description" content="Nginx安装配置download wget http://nginx.org/download/nginx-1.6.0.tar.gz tar zxf nginx-1.6.0.tar.gz
+
+configure
+需要根据ip做国家或者城市的分流的话可使用geoip模块； 在添加geoip模块之前需要，下载并安装相关的库文件 wget http://geolite.maxmind.com/downl">
+
     
-    
+    <link rel="alternative" href="/atom.xml" title="Blog Of Syang" type="application/atom+xml">
     
     
     <link rel="icon" href="/img/favicon.ico">
     
     
-    <link rel="apple-touch-icon" href="/img/pacman.jpg">
-    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
     
     <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
   <body>
     <header>
-      <div>
+      
+<div>
 		
 			<div id="imglogo">
-				<a href="/"><img src="/img/logo.svg" alt="Blog Of Syang" title="Blog Of Syang"/></a>
+				<a href="/"><img src="/img/logo.png" alt="Blog Of Syang" title="Blog Of Syang"/></a>
 			</div>
 			
 			<div id="textlogo">
 				<h1 class="site-name"><a href="/" title="Blog Of Syang">Blog Of Syang</a></h1>
-				<h2 class="blog-motto">不断发现，不断成长</h2>
+				<h2 class="blog-motto">不断发现，不断学习，不断成长，不断成熟</h2>
 			</div>
 			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
 			</a></div>
 			<nav class="animated">
 				<ul>
-					
+					<ul>
+					 
 						<li><a href="/">Home</a></li>
 					
 						<li><a href="/archives">Archives</a></li>
 					
-						<li><a href="/Resume">About</a></li>
+						<li><a href="/about">About</a></li>
 					
 					<li>
-					
+ 					
 					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
 						<label>Search</label>
-						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
 						<input type="hidden" name="q" value="site:www.syang.xyz">
 					</form>
 					
@@ -63,10 +80,10 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
 				</ul>
 			</nav>			
 </div>
-
     </header>
     <div id="container">
       <div id="main" class="post" itemscope itemprop="blogPost">
+  
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
@@ -74,36 +91,35 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
       <a href="/2015/05/05/Nginx-配置/" title="Nginx 配置" itemprop="url">Nginx 配置</a>
   </h1>
   <p class="article-author">By
-    
-      <a href="http://www.syang.xyz" title="Syang">Syang</a>
-    </p>
+       
+		<a href="/about" title="Syang" target="_blank" itemprop="author">Syang</a>
+		
   <p class="article-time">
-    <time datetime="2015-05-05T09:06:32.000Z" itemprop="datePublished">2015-05-05</time>
-    更新日期:<time datetime="2015-05-05T09:11:31.000Z" itemprop="dateModified">2015-05-05</time>
+    <time datetime="2015-05-05T09:06:32.000Z" itemprop="datePublished"> 发表于 2015-05-05</time>
     
   </p>
 </header>
 	<div class="article-content">
 		
-		
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
-		<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx安装配置"><span class="toc-number">1.</span> <span class="toc-text">Nginx安装配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx负载均衡配置"><span class="toc-number">2.</span> <span class="toc-text">Nginx负载均衡配置</span></a></li></ol>
+		
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx安装配置"><span class="toc-number">1.</span> <span class="toc-text">Nginx安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#download"><span class="toc-number">1.1.</span> <span class="toc-text">download</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#configure"><span class="toc-number">1.2.</span> <span class="toc-text">configure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#config"><span class="toc-number">1.3.</span> <span class="toc-text">config</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx负载均衡配置"><span class="toc-number">2.</span> <span class="toc-text">Nginx负载均衡配置</span></a></li></ol>
+		
 		</div>
 		
-		<h2 id="Nginx安装配置">Nginx安装配置</h2><ul>
-<li><p>download</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget http:<span class="comment">//nginx.org/download/nginx-1.6.0.tar.gz</span></span><br><span class="line">tar zxf nginx-<span class="number">1.6</span>.<span class="number">0</span><span class="class">.tar</span><span class="class">.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>configure<br>需要根据ip做国家或者城市的分流的话可使用geoip模块；对代码有压缩要求的需启用gzip模块；使用https协议的话，则需要添加http_ssl_module模块；</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">在添加geoip模块之前需要，下载并安装相关的库文件</span><br><span class="line">wget <span class="string">http:</span><span class="comment">//geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz </span></span><br><span class="line">wget <span class="string">http:</span><span class="comment">//geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">./configure --with-http_ssl_module --with-http_geoip_module --with-http_gzip_static_module </span><br><span class="line">--prefix=/<span class="keyword">app</span>-data/nginx </span><br><span class="line">--http-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/access.<span class="keyword">log</span> </span><br><span class="line">--<span class="keyword">error</span>-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/<span class="keyword">error</span>.<span class="literal">log</span></span><br></pre></td></tr></table></figure>
+		<h2 id="Nginx安装配置">Nginx安装配置</h2><h3 id="download">download</h3><p> wget <a href="http://nginx.org/download/nginx-1.6.0.tar.gz" target="_blank" rel="external">http://nginx.org/download/nginx-1.6.0.tar.gz</a><br> tar zxf nginx-1.6.0.tar.gz</p>
+<hr>
+<h3 id="configure">configure</h3><ol>
+<li>需要根据ip做国家或者城市的分流的话可使用geoip模块；<br> 在添加geoip模块之前需要，下载并安装相关的库文件<br> wget <a href="http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz" target="_blank" rel="external">http://geolite.maxmind.com/download/geoip/database/GeoLiteCity.dat.gz</a><br> wget <a href="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz" target="_blank" rel="external">http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry/GeoIP.dat.gz</a></li>
+<li>对代码有压缩要求的需启用gzip模块；</li>
+<li>使用https协议的话，则需要添加http_ssl_module模块；</li>
+</ol>
 <ul>
-<li>config</li>
+<li>编译安装<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cd</span> nginx-1.6.0</span><br><span class="line">./configure --with-http_ssl_module --with-http_geoip_module --with-http_gzip_static_module --prefix=/<span class="keyword">app</span>-data/nginx --http-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/access.<span class="keyword">log</span> --<span class="keyword">error</span>-<span class="keyword">log</span>-path=/<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/base/<span class="keyword">error</span>.<span class="literal">log</span></span><br><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+</li>
 </ul>
-<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">nginx.<span class="keyword">conf</span>:通用全局的配置，如gzip压缩，geoip模块配置，work_process一般是核*2</span><br><span class="line">site-available:已搭建服务</span><br><span class="line">site-enabled:正使用的服务</span><br><span class="line">内部配置文件需改动部分一般只有server_name和<span class="keyword">log</span>地址。</span><br><span class="line">server &#123;</span><br><span class="line">    listen 80;</span><br><span class="line">    <span class="keyword">set</span> <span class="label">$root_folder</span> /ext/bug.signichat.com/web;</span><br><span class="line">    root <span class="label">$root_folder</span>;</span><br><span class="line">    server_name <span class="keyword">test</span>.signichat.com;</span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .(<span class="keyword">zip</span>|js|css) &#123;</span><br><span class="line">        expires 1d;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ .(dzi|gif|jpeg|png|jpg|swf|ico) &#123;</span><br><span class="line">        expires 1m;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ /index.php &#123;</span><br><span class="line">        fastcgi_pass   127.0.0.1:9000;</span><br><span class="line">        fastcgi_param  SCRIPT_FILENAME  <span class="label">$root_folder</span>/index.php;</span><br><span class="line">        <span class="keyword">include</span>        fastcgi_params;</span><br><span class="line">        fastcgi_param PATH_INFO         <span class="label">$fastcgi_path_info</span>;</span><br><span class="line">        fastcgi_param HTTP_REFERER      <span class="label">$http_referer</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    location ~ / &#123;</span><br><span class="line">        rewrite ^/(.*)$ /index.php last;</span><br><span class="line">    &#125;</span><br><span class="line">    error_log  /<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/signichat/<span class="keyword">error</span>.<span class="keyword">log</span>;</span><br><span class="line">    access_log /<span class="keyword">app</span>-util/<span class="keyword">log</span>/nginx/signichat/access.<span class="keyword">log</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="config">config</h3><p>nginx.conf:通用全局的配置，如gzip压缩，geoip模块配置，work_process一般是核*2<br>site-available:已搭建服务<br>site-enabled:正使用的服务<br>内部配置文件需改动部分一般只有server_name和log地址。<br><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">server</span> &#123;</span><br><span class="line">    <span class="title">listen</span> <span class="number">80</span>;</span><br><span class="line">    <span class="title">set</span> <span class="variable">$root_folder</span> /app-data/www/域名/web;</span><br><span class="line">    <span class="title">root</span> <span class="variable">$root_folder</span>;</span><br><span class="line">    <span class="title">server_name</span> 域名;</span><br><span class="line">    <span class="title">location</span> / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ .(zip|js|css)</span> &#123;</span><br><span class="line">        <span class="title">expires</span> <span class="number">1d</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ .(dzi|gif|jpeg|png|jpg|swf|ico)</span> &#123;</span><br><span class="line">        <span class="title">expires</span> <span class="number">1m</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ /index.php</span> &#123;</span><br><span class="line">        <span class="title">fastcgi_pass</span>   <span class="number">127.0.0.1:9000</span>;</span><br><span class="line">        <span class="title">fastcgi_param</span>  SCRIPT_FILENAME  <span class="variable">$root_folder</span>/index.php;</span><br><span class="line">        <span class="title">include</span>        fastcgi_params;</span><br><span class="line">        <span class="title">fastcgi_param</span> PATH_INFO         <span class="variable">$fastcgi_path_info</span>;</span><br><span class="line">        <span class="title">fastcgi_param</span> HTTP_REFERER      <span class="variable">$http_referer</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">location</span> <span class="regexp">~ /</span> &#123;</span><br><span class="line">        <span class="title">rewrite</span><span class="regexp"> ^/(.*)$</span> /index.php <span class="built_in">last</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="title">error_log</span>  /app-util/log/nginx/A/error.log;</span><br><span class="line">    <span class="title">access_log</span> /app-util/log/nginx/A/access.log;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <ul>
 <li>启动<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/app-data/</span>nginx<span class="regexp">/sbin/</span>nginx</span><br><span class="line">如果只修改配置文件，则只须重新加载配置文件</span><br><span class="line"><span class="regexp">/app-data/</span>nginx<span class="regexp">/sbin/</span>nginx -s reload</span><br><span class="line">在使用ssl模块的情况下，可能有加载证书的过程，所以修改完配置文件可能需要关闭nginx，再启动才能有效</span><br></pre></td></tr></table></figure>
 </li>
@@ -115,25 +131,40 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
   
 	</div>
 		<footer class="article-footer clearfix">
+<div class="article-catetags">
 
-
-
-
-<div class="article-share" id="share">
-
-  <div data-url="http://www.syang.xyz/2015/05/05/Nginx-配置/" data-title="Nginx 配置 | Blog Of Syang" data-tsina="null" class="share clearfix">
-  </div>
 
 </div>
-</footer>   	       
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://www.syang.xyz/2015/05/05/Nginx-配置/" data-title="Nginx 配置 | Blog Of Syang" data-tsina="2237505744" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
 	</article>
 	
 <nav class="article-nav clearfix">
  
+ <div class="prev" >
+ <a href="/2015/05/06/PHP为什么低一等/" title="PHP为什么低一等">
+  <strong>上一篇：</strong><br/>
+  <span>
+  PHP为什么低一等</span>
+</a>
+</div>
+
 
 <div class="next">
 <a href="/2015/05/05/BASH-string/"  title="BASH--string">
- <strong>NEXT:</strong><br/> 
+ <strong>下一篇：</strong><br/> 
  <span>BASH--string
 </span>
 </a>
@@ -142,12 +173,25 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
 </nav>
 
 	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/05/05/Nginx-配置/" data-title="Nginx 配置" data-url="http://www.syang.xyz/2015/05/05/Nginx-配置/"></div>
+</section>
+
+
+<section id="comments" class="comment">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
-  <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx安装配置"><span class="toc-number">1.</span> <span class="toc-text">Nginx安装配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx负载均衡配置"><span class="toc-number">2.</span> <span class="toc-text">Nginx负载均衡配置</span></a></li></ol>
+ 
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx安装配置"><span class="toc-number">1.</span> <span class="toc-text">Nginx安装配置</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#download"><span class="toc-number">1.1.</span> <span class="toc-text">download</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#configure"><span class="toc-number">1.2.</span> <span class="toc-text">configure</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#config"><span class="toc-number">1.3.</span> <span class="toc-text">config</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Nginx负载均衡配置"><span class="toc-number">2.</span> <span class="toc-text">Nginx负载均衡配置</span></a></li></ol>
+ 
   </div>
 
 <div id="asidepart">
@@ -159,7 +203,9 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
 	<p class="asidetitle">分类</p>
 		<ul>
 		
+		  
 			<li><a href="/categories/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+		  
 		
 		</ul>
 </div>
@@ -170,18 +216,52 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
 	<p class="asidetitle">标签</p>
 		<ul class="clearfix">
 		
-			<li><a href="/tags/bash/" title="bash">bash<sup>1</sup></a></li>
+			
+				<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
 		
-			<li><a href="/tags/linux/" title="linux">linux<sup>1</sup></a></li>
+			
+				<li><a href="/tags/bash/" title="bash">bash<sup>1</sup></a></li>
+			
 		
-			<li><a href="/tags/string/" title="string">string<sup>1</sup></a></li>
+			
+				<li><a href="/tags/string/" title="string">string<sup>1</sup></a></li>
+			
 		
 		</ul>
 </div>
 
 
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="https://coderq.com" target="_blank" title="一个面向程序员交流分享的新一代社区">码农圈</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="raytaylorlin.com" target="_blank" title="寿寿">寿寿</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://wuchong.me" target="_blank" title="Jark&#39;s Blog">Jark&#39;s Blog</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
   <div class="rsspart">
-	<a href="null" target="_blank" title="rss">RSS 订阅</a>
+	<a href="/atom.xml" target="_blank" title="rss">RSS 订阅</a>
 </div>
 
 </aside>
@@ -195,21 +275,39 @@ configure需要根据ip做国家或者城市的分流的话可使用geoip模块�
 	</div>
 	
 	
-	<div class="social-font clearfix">
+	<section class="info">
+		<p> Hello ,I&#39;m Syang Page in Google. <br/>
+			This is my blog,believe it or not.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		
+		
+		
 		
 		
 		
 		
 		
 	</div>
-		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2015 
+			
 		
-		<a href="http://www.syang.xyz" target="_blank" title="Syang">Syang</a>
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="Syang">Syang</a>
+		
 		
 		</p>
 </div>
 </footer>
-    <script src="/js/jquery-2.1.0.min.js"></script>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
 <script type="text/javascript">
 $(document).ready(function(){ 
   $('.navbar').click(function(){
@@ -227,20 +325,6 @@ $(document).ready(function(){
       a = $('#asidepart'),
       c = $('.closeaside'),
       o = $('.openaside');
-  $(window).resize(function(){
-    getSize(); 
-    if (myWidth >= 1024) {
-      $('header nav').removeClass('shownav');
-    }else
-    {
-      m.removeClass('moveMain');
-      a.css('display', 'block').removeClass('fadeOut');
-      o.css('display', 'none');
-      
-      $('#toc.toc-aside').css('display', 'none');
-        
-    }
-  });
   c.click(function(){
     a.addClass('fadeOut').css('display', 'none');
     o.css('display', 'block').addClass('fadeIn');
@@ -254,6 +338,20 @@ $(document).ready(function(){
   $(window).scroll(function(){
     o.css("top",Math.max(80,260-$(this).scrollTop()));
   });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
 });
 </script>
 
@@ -262,8 +360,6 @@ $(document).ready(function(){
   var ai = $('.article-content>iframe'),
       ae = $('.article-content>embed'),
       t  = $('#toc'),
-      h  = $('article h2')
-      ah = $('article h2'),
       ta = $('#toc.toc-aside'),
       o  = $('.openaside'),
       c  = $('.closeaside');
@@ -273,19 +369,15 @@ $(document).ready(function(){
   if(ae.length>0){
    ae.wrap('<div class="video-container" />');
   };
-  if(ah.length==0){
-    t.css('display','none');
-  }else{
-    c.click(function(){
-      ta.css('display', 'block').addClass('fadeIn');
-    });
-    o.click(function(){
-      ta.css('display', 'none');
-    });
-    $(window).scroll(function(){
-      ta.css("top",Math.max(140,320-$(this).scrollTop()));
-    });
-  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
 });
 </script>
 
@@ -296,15 +388,16 @@ $(document).ready(function(){
       url = $this.attr('data-url'),
       encodedUrl = encodeURIComponent(url),
       title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina');
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
   var html = [
   '<a href="#" class="overlay" id="qrcode"></a>',
-  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#share"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
-  '<a href="#textlogo" class="article-back-to-top" title="Top"></a>',
+  '<div class="qrcode clearfix"><span>扫描二维码分享到微信朋友圈</span><a class="qrclose" href="#nothing"></a><strong>Loading...Please wait</strong><img id="qrcode-pic" data-src="http://s.jiathis.com/qrcode.php?url=' + encodedUrl + '"/></div>',
   '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="QRcode"></a>',
   '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="Weibo"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
   '<span title="Share to"></span>'
   ].join('');
   $this.append(html);
@@ -320,8 +413,93 @@ $(document).ready(function(){
 
 
 
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"Syang"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
 
 
+<script type="text/javascript">
+
+var disqus_shortname = 'Syang';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
 
   </body>
 </html>
