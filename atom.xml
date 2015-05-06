@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Blog Of Syang]]></title>
+  <title><![CDATA[Syang's Blog]]></title>
   <subtitle><![CDATA[不断发现，不断学习，不断成长，不断成熟]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.syang.xyz/"/>
