@@ -4,7 +4,7 @@
   <subtitle><![CDATA[不断发现，不断学习，不断成长，不断成熟]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.syang.xyz/"/>
-  <updated>2015-05-06T02:13:11.000Z</updated>
+  <updated>2015-05-07T15:24:53.000Z</updated>
   <id>http://www.syang.xyz/</id>
   
   <author>
@@ -13,6 +13,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[How To Set Up Blog By Hexo]]></title>
+    <link href="http://www.syang.xyz/2015/05/07/hello-world/"/>
+    <id>http://www.syang.xyz/2015/05/07/hello-world/</id>
+    <published>2015-05-07T15:24:53.000Z</published>
+    <updated>2015-05-07T15:24:53.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="Github_Pages">Github Pages</h2><p>  Github pages是用于展示自己github所有仓库的web页面,它有300M的免费空间可使用，介于它免费稳定，是搭建blog的好地方;<br>  github pages还提供Automatic Page Generator来生成静态页面，为不懂web技术的博主们提供了便利,当然我们也可以在本地使用其他更加方便的blog框架来建站，如Hexo;<br>  如果github被墙，还有gitcafe可用</p>
+<hr>
+<h2 id="github">github</h2><p>如果pc上没有git和node的话还需要安装git和node，下面的步骤需要用到。我用的是ubuntu系统，所以主要以ubuntu为例。</p>
+<h3 id="创建github帐号">创建github帐号</h3><ol>
+<li>首先申请一个github的帐号</li>
+<li>点击右上角按钮创建new repository新仓库</li>
+<li>命名:用户名.github.io，如zhaoxiangyang.github.io</li>
+<li>选择public</li>
+</ol>
+<h3 id="添加公钥">添加公钥</h3><ol>
+<li>进到用户主目录下的.ssh目录，查看id_rsa.pub</li>
+<li><p>如果没有id_rsa.pub</p>
+ <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa  可以添加口令也可直接<span class="keyword">enter</span>到底</span><br><span class="line">ssh-<span class="keyword">add</span>   可添加私钥到ssh-agent的缓存</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将id_rsa.pub中的全部内容复制到github settings中的ssh keys中<br>可以通过下面的命令，查看设置是否成功，git@github.com的部分不要修改：</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line">yes</span><br><span class="line">成功的结果</span><br><span class="line">Hi zhaoxianyang! You have successfully authenticated, <span class="keyword">but</span> GitHub <span class="keyword">does</span> <span class="keyword">not</span> provide shell access.</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h3 id="创建本地仓库">创建本地仓库</h3><p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user<span class="class">.name</span> <span class="string">"zhaoxianyang"</span> <span class="comment">//用户名，用作git提交作记录</span></span><br><span class="line">git config --global user<span class="class">.email</span> <span class="string">"zhaoxianyang385@gmail.com"</span> <span class="comment">//自己的邮箱</span></span><br></pre></td></tr></table></figure></p>
+<ol>
+<li>在本地创建一个blog目录</li>
+<li>进入blog后git clone git@github.com:zhaoxianyang/zhaoxianyang.github.io.git</li>
+<li>可以创建一个readme文件 <figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git add readme<span class="class">.md</span></span><br><span class="line">git commit -m <span class="string">"first commit"</span></span><br><span class="line">git remote add origin git@github<span class="class">.com</span>:zhaoxianyang/zhaoxianyang<span class="class">.github</span><span class="class">.io</span><span class="class">.git</span></span><br><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p><a href="https://help.github.com/articles/generating-ssh-keys/" target="_blank" rel="external">Generating SSH Keys</a></p>
+<h2 id="博客神器Hexo">博客神器Hexo</h2><p>神奇的博客框架hexo，小白建站全靠它了，hexo是nodejs下的一个插件，这就是要提前安装node的原因。<br>下面以指令的形式详细介绍每一步的步骤：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-<span class="keyword">cli</span> -<span class="keyword">g</span></span><br><span class="line">hexo init hexo    初始化一个blog目录，名字你定</span><br><span class="line"><span class="keyword">cd</span> hexo</span><br><span class="line">npm install    将hexo需要的其他包安装</span><br><span class="line">hexo server (s)   启动博客服务器，localhost:4000</span><br><span class="line"></span><br><span class="line">hexo <span class="keyword">generate</span> (<span class="keyword">g</span>) 生成静态页面</span><br><span class="line">hexo deploy (<span class="keyword">d</span>) 将静态页面部署到远端的仓库，也就是github pages</span><br></pre></td></tr></table></figure></p>
+<h3 id="主题">主题</h3><p>github上有很多其他博主开源的主题，一条指令就可以占有它<br>git clone <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism.git" target="_blank" rel="external">https://github.com/raytaylorlin/hexo-theme-raytaylorism.git</a> themes/raytaylorism</p>
+<p>好了，你的博客搭建好了，下面你就自己慢慢的折腾它吧…</p>
+<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+<h2 id="参考">参考</h2><p><a href="http://cnfeat.com/2014/05/10/2014-05-11-how-to-build-a-blog/" target="_blank" rel="external">cnfeat的博客</a><br><a href="https://github.com/wuchong/jacman" target="_blank" rel="external">本站主题来源，大家可以点这里</a><br><a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism" target="_blank" rel="external">参考主题, 寿寿的主题，只适合hexo@2.8.*</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="Github_Pages">Github Pages</h2><p>  Github pages是用于展示自己github所有仓库的web页面,它有300M的免费空间可使用，介于它免费稳定，是搭建blog的好地方;<br>  github pages还提供Auto]]>
+    </summary>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[PHP为什么低一等]]></title>
@@ -91,28 +143,6 @@
       <category term="string" scheme="http://www.syang.xyz/tags/string/"/>
     
       <category term="Linux" scheme="http://www.syang.xyz/categories/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <link href="http://www.syang.xyz/2015/05/05/hello-world/"/>
-    <id>http://www.syang.xyz/2015/05/05/hello-world/</id>
-    <published>2015-05-05T07:14:41.000Z</published>
-    <updated>2015-05-05T07:14:41.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
-    </summary>
     
   </entry>
   
